@@ -65,7 +65,7 @@ client.on("message", async (topic, message) => {
     await axios.put(firebaseUrl, {
       latitude: parseFloat(latitude),
       longitude: parseFloat(longitude),
-      timestamp: timestamp || Date.now(),
+      timestamp: Date.now(),
       speed: parseFloat(speed) || 0,
       heading: parseFloat(heading) || 0,
       accuracy: parseFloat(accuracy) || 5,
